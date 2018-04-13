@@ -9,7 +9,8 @@ $borderLight: transparentize($textLight, 0.8);
 
 
 // for body 
-$bg: transparentize(#80a39c, 0.2);
+$bgOpaque: #80a39c;
+$bg: transparentize($bgOpaque, 0.2);
 
 // for #site-nav
 $navGradient: rgba(0, 0, 0, 0.80);

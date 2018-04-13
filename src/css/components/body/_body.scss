@@ -1,21 +1,28 @@
 body {
     // varriables
-    --gradientHeight: 400px;
-    --imageHeight: calc(100vh - var(--gradientHeight));
+    // scrolling overlay
+    --gradientHeight: 300px;
+    --gradientPosTop: calc(100vh - var(--gradientHeight));
+    
+    // background image
+    --imageHeight: calc(100vw * (2 / 3));
+    // for fade out, bottom of the background image
+    --fadePosTop: calc(var(--imageHeight) - var(--gradientHeight));
+    
     --bodyPaddingX: 17.8vw;
     --bodyPaddingBottom: 15.9vw;
 
     // first background values are for the gradient
     // second background valuse are for the image
     background:
-        linear-gradient(to bottom, transparent var(--imageHeight), $bg calc(var(--imageHeight) + var(--gradientHeight)), $bg),
-        url('../../assets/images/ruthie-163318-unsplash.jpg') #80a39c;
+        linear-gradient(to bottom, transparent var(--gradientPosTop), $bg calc(var(--gradientPosTop) + var(--gradientHeight))),
+        url('../../assets/images/ruthie-163318-unsplash.jpg') $bgOpaque;
     background-position: 
         0 0,
         0 0;
     background-size: 
         100vw 100%,
-        cover;
+        100vw var(--imageHeight); // bg image width always === viewport width
     background-repeat: 
         no-repeat,
         no-repeat;
@@ -23,4 +30,16 @@ body {
         scroll,
         fixed;
     padding: var(--navHeight) var(--bodyPaddingX) var(--bodyPaddingBottom);
+    position: relative;
+    z-index: -20;
+    &:before {
+        content: '';
+        height: var(--gradientHeight);
+        width: 100%;
+        position: fixed;
+        top: var(--fadePosTop);
+        left: 0;
+        background-image: linear-gradient(to top, $bgOpaque, transparent);
+        z-index: -10;
+    }
 }
