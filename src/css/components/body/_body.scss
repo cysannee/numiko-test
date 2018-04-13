@@ -7,15 +7,15 @@ body {
 
     // first background values are for the gradient
     // second background valuse are for the image
-    background-image:
+    background:
         linear-gradient(to bottom, transparent var(--imageHeight), $bg calc(var(--imageHeight) + var(--gradientHeight)), $bg),
-        url('../../assets/images/ruthie-163318-unsplash.jpg');
+        url('../../assets/images/ruthie-163318-unsplash.jpg') #80a39c;
     background-position: 
         0 0,
         0 0;
     background-size: 
         100vw 100%,
-        100vw;
+        cover;
     background-repeat: 
         no-repeat,
         no-repeat;
