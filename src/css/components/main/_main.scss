@@ -1,0 +1,9 @@
+main {
+    --mainPaddingX: 7.1vw;
+    --mainPaddingY: 6.8vw;
+
+    width: 100%;
+    padding: var(--mainPaddingY) var(--mainPaddingX);
+    background-color: $mainBox;
+    color: $textLight;
+}

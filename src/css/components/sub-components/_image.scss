@@ -1,0 +1,7 @@
+.image-component {
+    --imagePaddingTop: 3.6vw;
+    --imagePaddingBottom: 8.2vw;
+
+    width: 100%;
+    margin: var(--imagePaddingTop) 0 var(--imagePaddingBottom);
+}

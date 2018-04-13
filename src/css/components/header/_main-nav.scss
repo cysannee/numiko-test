@@ -1,0 +1,49 @@
+#main-nav {
+    --mainNavHeight: 7.1vw;
+    --mainNavMarginBottom: 3.6vw;
+    --mainNavSz: 1vw;
+
+    height: var(--mainNavHeight);
+    margin-bottom: var(--mainNavMarginBottom);
+    font-size: var(--mainNavSz);
+
+    ul {
+        height: 100%;
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+        display: flex;
+
+        li {
+            flex-basis: 25%;
+            height: 100%;
+
+            // only adds borders inside of box
+            &:not(:last-child) {
+                border-right: 1px solid $borderLight;
+            }
+            &:not(:first-child) {
+                border-left: 1px solid $borderLight;
+            }
+
+            // separate active and inactive nav items
+            // to prevent alpha doubling up
+            &:not(.active) {
+                background-color: $mainBox;                
+            }
+            &.active {
+                background-color: $mainNavActive;
+            }
+        }
+        
+        a {
+            // fill out available space - for easier clicking
+            height: 100%;
+            width: 100%;
+            color: $textLight;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

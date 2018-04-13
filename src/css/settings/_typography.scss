@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Whitney Bold';
+    src: url('../../assets/fonts/Whitney-Bold.otf');
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Whitney Semibold';
+    src: url('../../assets/fonts/Whitney-Semibold.otf');
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Whitney Medium';
+    src: url('../../assets/fonts/Whitney-Medium.otf');
+    font-style: normal;
+    font-weight: 500;
+}
+
+%whitneySemi {
+    font-family: 'Whitney Semibold';
+    font-weight: 600;    
+}
+
+%whitneyBold {
+    font-family: 'Whitney Semibold';
+    font-weight: 700;    
+}
+
+body {
+    font-family: 'Whitney Medium', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}

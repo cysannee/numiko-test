@@ -1,0 +1,56 @@
+.accordion {
+    --accordionMarginTop: 5.5vw;
+
+    margin-top: var(--accordionMarginTop);
+    
+    // button for carousel item
+    .toggle {
+        --toggleHeight: 7.1vw;
+        --toggleSize: 1.3vw;
+        --togglePaddingX: 3.6vw;
+        
+        @extend %whitneyBold;
+        height: var(--toggleHeight);
+        border: none;
+        width: 100%;
+        background-color: transparent;
+        color: $textLight;
+        font-size: var(--toggleSize);
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid $borderLight;
+        padding: 0 var(--togglePaddingX);
+        cursor: pointer;
+        
+        & > * {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    // open carousel item styles
+    .open {
+        background-color: $accent;
+        border: none;
+    }
+    
+    .text-component {
+        --textPaddingY: 7vw;
+        
+        padding: var(--textPaddingY);
+        background-color: $accordionBg;
+        color: $textDark;    
+    }
+    
+    // closed carousel item styles
+    .visually-hidden {
+        /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+        position: absolute !important;
+        height: 1px; 
+        width: 1px; 
+        overflow: hidden;
+        clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+        clip: rect(1px, 1px, 1px, 1px);  
+    }
+}

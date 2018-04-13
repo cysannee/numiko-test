@@ -1,0 +1,29 @@
+// text colors
+$textLight: #fdfffe;
+$textDark: #343434;
+
+// general
+$accent: #05637d;
+$borderLight: transparentize($textLight, 0.8);
+
+
+
+// for body 
+$bg: transparentize(#80a39c, 0.2);
+
+// for #site-nav
+$navGradient: rgba(0, 0, 0, 0.80);
+
+// for h1
+$titleTextShadow: rgba(0, 0, 0, 0.6);
+
+// for #main-nav
+$mainNavActive: transparentize($accent, 0.2);
+
+// for main
+$mainBox: transparentize(#2e3a3a, 0.2);
+
+// for accordion
+$accordionBg: #ececec;
+
+

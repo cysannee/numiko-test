@@ -1,0 +1,48 @@
+#site-nav {
+    --listWidth: 46vw;
+    // --listSize: 0.9vw;
+    --listSize: 1vw;
+
+    background-image: linear-gradient(to bottom, $navGradient, transparent);
+    height: var(--navHeight);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: $textLight;
+    font-size: var(--listSize);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        width: var(--listWidth);
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        display: flex;
+        justify-content: space-between;
+    }
+    a {
+        color: $textLight;
+    }
+}
+
+#search {
+    // offset from viewport edge
+    --searchRight: 5vw;
+
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: $textLight;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    right: var(--searchRight);
+}

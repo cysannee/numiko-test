@@ -1,0 +1,26 @@
+body {
+    // varriables
+    --gradientHeight: 400px;
+    --imageHeight: calc(100vh - var(--gradientHeight));
+    --bodyPaddingX: 17.8vw;
+    --bodyPaddingBottom: 15.9vw;
+
+    // first background values are for the gradient
+    // second background valuse are for the image
+    background-image:
+        linear-gradient(to bottom, transparent var(--imageHeight), $bg calc(var(--imageHeight) + var(--gradientHeight)), $bg),
+        url('../../assets/images/ruthie-163318-unsplash.jpg');
+    background-position: 
+        0 0,
+        0 0;
+    background-size: 
+        100vw 100%,
+        100vw;
+    background-repeat: 
+        no-repeat,
+        no-repeat;
+    background-attachment: 
+        scroll,
+        fixed;
+    padding: var(--navHeight) var(--bodyPaddingX) var(--bodyPaddingBottom);
+}

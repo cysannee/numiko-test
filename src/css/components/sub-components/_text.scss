@@ -1,0 +1,40 @@
+.text-component {
+    --textPaddingX: 6.4vw;
+    
+    padding: 0 var(--textPaddingX);
+
+    .caption {
+        --captionLine: 2.5vw;
+        --captionSize: 1.3vw;
+        --captionMarginBottom: 3.6vw;
+        
+        @extend %whitneySemi;
+        font-size: var(--captionSize);
+        line-height: var(--captionLine);
+        margin-bottom: var(--captionMarginBottom);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        --headingSize: 1.3vw;
+        --headingMarginBottom: 2vw;
+        
+        @extend %whitneyBold;
+        font-size: var(--headingSize);        
+        margin-bottom: var(--headingMarginBottom);
+    }
+
+    p {
+        --pSize: 1vw;        
+        --pLine: 2vw;
+        --pMarginBottom: 1.4vw;
+        
+        font-size: var(--pSize);                
+        line-height: var(--pLine);
+        margin-bottom: var(--pMarginBottom);
+    }
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Numiko</title>
+    <link rel="icon" href="assets/images/favicon.png" type="img/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="/dist/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header role="banner">
+        <!-- 
+            #site-nav is the primary navigation, uses to navigate to different site sections
+            gets role attribute and since there's two nav inside header, both navs have unique ids
+        -->
+        <nav id="site-nav" role="navigation">
+            <ul>
+                <!-- 
+                    anchor tags are used because they're for site navigation 
+                    li's are direct children of ul
+                -->
+                <li><a href="#">Visit</a></li>
+                <li><a href="#">What's On</a></li>
+                <li><a href="#">The Collection</a></li>
+                <li><a href="#">Learning</a></li>
+                <li><a href="#">Support Us</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Venue Hire</a></li>
+            </ul>
+            <!-- 
+                search belongs to site navigation 
+                and is a button that triggers visual changes
+            -->
+            <button id="search" type="button" aria-label="Search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </nav>
+
+        <h1 id="section-title">Visit</h1>
+
+        <!-- 
+            #main-nav is a secondary navigation for the current section: Visit.
+            Was previously inside the main element but separating the two visually, 
+            with a margin was complicated
+         -->
+        <nav id="main-nav">
+            <ul>
+                <!-- added active styling for current page -->
+                <li class="active"><a href="#">How to Reach Us</a></li>
+                <li><a href="#">Group Visits</a></li>
+                <li><a href="#">Access</a></li>
+                <li><a href="#">The Restaurant</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main role="main">
+
+        <!-- 
+            made content of current page (How to Reach Us) and accordion items, articles.
+            content of current page is direct child of main but accordion is a different 
+            section inside main. Had considered aside instead of section.
+        -->
+        <article class="content">
+
+            <div class="text-component">
+                <!-- 
+                    first text in text-component is too long for a heading - is more like a caption.
+                    Gave it a .caption class for easy styling
+                -->
+                <p class="caption">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, et modi doloribus quam deleniti quae nulla at accusantium dolor fugit.
+                </p>
+                <h2>How to Reach Us</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident enim totam natus, omnis voluptas ullam exercitationem reprehenderit in similique. Labore dolorum at mollitia, sed aspernatur a consequuntur voluptatibus fugiat quod?
+                </p>
+            </div>
+
+            <img  class="image-component" src="http://via.placeholder.com/600x400/1c2323/fdfffe" alt="image description">
+            
+            <div class="text-component">
+                <p class="caption">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, et modi doloribus quam deleniti quae nulla at accusantium dolor fugit.
+                </p>
+                <h2>How to Reach Us</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quaerat quibusdam aperiam amet nobis! Quae temporibus obcaecati, alias animi necessitatibus maiores eveniet dolore delectus reiciendis atque quos voluptates asperiores repellat corrupti, expedita voluptatem eaque doloremque, modi recusandae distinctio voluptatibus. Fugit explicabo nobis officiis ratione dolor commodi saepe veritatis possimus debitis rerum accusantium, neque voluptates inventore, est alias illum quasi praesentium? Porro error voluptate iusto eligendi blanditiis saepe, animi molestiae voluptas.
+                </p>
+            </div>
+        </article>
+
+
+        <section class="accordion">
+            <!-- 
+                an accordion item is made up of a button and a text-component.
+                button is used because it triggers visual changes rather than
+                site navigation
+
+                all carousel items should be visible to screenreaders 
+                but are visually shown/hidden depending on .visually-hidden class. 
+                .open class used for styling
+             -->
+            <article>
+                <button type="button" class="toggle open">
+                    <!-- 
+                        two span elements for flex's justify content space-between
+                        added icon class for easy styling and switching of text content (+/-)
+                     -->
+                    <span>Group Visits</span>
+                    <span class="icon" aria-hidden="true">&ndash;</span>
+                </button>
+                <div class="text-component">
+                    <p class="caption">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ducimus rem distinctio ad officiis hic laborum modi necessitatibus aliquam et!
+                    </p>
+                    <!-- 
+                        lower heading levels are used inside carousel 
+                    -->
+                    <h3>Private Guided Tours</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, asperiores cupiditate qui placeat cum magni ducimus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus natus consequuntur quam quas aliquid quisquam, dolores aliquam laudantium quia sapiente dignissimos ullam ipsum architecto ad minima fugit reprehenderit, quis voluptates facilis nostrum impedit iusto neque. Repellat dolores ipsam soluta neque.
+                    </p>
+                    <h3>Unguided Tours</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, cupiditate consequatur a cum est quasi error? To book please call 012 3456 7890 or <a href="#">email</a>.
+                    </p>        
+                </div>         
+            </article>
+            <article>
+                <button type="button" class="toggle">
+                    <span>Another Item</span>
+                    <span class="icon" aria-hidden="true">&#43;</span>
+                </button>
+                <div class="text-component visually-hidden">
+                    <p class="caption">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ducimus rem distinctio ad officiis hic laborum modi necessitatibus aliquam et!
+                    </p>
+                    <h3>Private Guided Tours</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, asperiores cupiditate qui placeat cum magni ducimus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus natus consequuntur quam quas aliquid quisquam, dolores aliquam laudantium quia sapiente dignissimos ullam ipsum architecto ad minima fugit reprehenderit, quis voluptates facilis nostrum impedit iusto neque. Repellat dolores ipsam soluta neque.
+                    </p>
+                    <h3>Unguided Tours</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, cupiditate consequatur a cum est quasi error? To book please call 012 3456 7890 or <a href="#">email</a>.
+                    </p>        
+                </div>         
+            </article>
+            <article>
+                <button type="button" class="toggle">
+                    <span>Yet Another Item</span>
+                    <span class="icon" aria-hidden="true">&#43;</span>
+                </button>
+                <div class="text-component visually-hidden">
+                    <p class="caption">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ducimus rem distinctio ad officiis hic laborum modi necessitatibus aliquam et!
+                    </p>
+                    <h3>Private Guided Tours</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, asperiores cupiditate qui placeat cum magni ducimus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus natus consequuntur quam quas aliquid quisquam, dolores aliquam laudantium quia sapiente dignissimos ullam ipsum architecto ad minima fugit reprehenderit, quis voluptates facilis nostrum impedit iusto neque. Repellat dolores ipsam soluta neque.
+                    </p>
+                    <h3>Unguided Tours</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, cupiditate consequatur a cum est quasi error? To book please call 012 3456 7890 or <a href="#">email</a>.
+                    </p>        
+                </div>         
+            </article>
+        </section>
+    </main>
+
+    <footer role="contentinfo"></footer>
+</body>
+</html>

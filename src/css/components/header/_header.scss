@@ -1,0 +1,16 @@
+#section-title {
+    --sectionTitleSize: 2.6vw;
+    --sectionTitleHeight: 15vw;
+    // --sectionTitleHeight: 26vw;
+
+    height: var(--sectionTitleHeight);
+    color: $textLight;
+    font-size: var(--sectionTitleSize);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px $titleTextShadow;
+
+    display: flex;
+    align-items: center;
+}
