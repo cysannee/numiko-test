@@ -7,3 +7,9 @@ main {
     background-color: $mainBox;
     color: $textLight;
 }
+
+.content {
+    --contentMarginBottom: 5.5vw;
+
+    margin-bottom: var(--contentMarginBottom);
+}

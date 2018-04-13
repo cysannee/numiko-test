@@ -93,7 +93,7 @@
         </article>
 
 
-        <section class="accordion">
+        <section>
             <!-- 
                 an accordion item is made up of a button and a text-component.
                 button is used because it triggers visual changes rather than
@@ -103,7 +103,7 @@
                 but are visually shown/hidden depending on .visually-hidden class. 
                 .open class used for styling
              -->
-            <article>
+            <article class="accordion">
                 <button type="button" class="toggle open">
                     <!-- 
                         two span elements for flex's justify content space-between
@@ -132,7 +132,7 @@
                     </p>        
                 </div>         
             </article>
-            <article>
+            <article class="accordion">
                 <button type="button" class="toggle">
                     <span>Another Item</span>
                     <span class="icon" aria-hidden="true">&#43;</span>
@@ -154,7 +154,7 @@
                     </p>        
                 </div>         
             </article>
-            <article>
+            <article class="accordion">
                 <button type="button" class="toggle">
                     <span>Yet Another Item</span>
                     <span class="icon" aria-hidden="true">&#43;</span>
@@ -180,5 +180,6 @@
     </main>
 
     <footer role="contentinfo"></footer>
+    <script src="dist/js/script.js"></script>
 </body>
 </html>
